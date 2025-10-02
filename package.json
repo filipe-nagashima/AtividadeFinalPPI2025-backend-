@@ -1,0 +1,19 @@
+{
+  "name": "atividadefinalppi2025-backend-",
+  "version": "1.0.0",
+  "description": "Atividade Final da matéria de PPI (backend)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipe-nagashima/AtividadeFinalPPI2025-backend-.git"
+  },
+  "author": "Filipe Souza Nagashima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipe-nagashima/AtividadeFinalPPI2025-backend-/issues"
+  },
+  "homepage": "https://github.com/filipe-nagashima/AtividadeFinalPPI2025-backend-#readme"
+}
