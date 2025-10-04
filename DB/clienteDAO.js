@@ -67,7 +67,7 @@ export default class ClienteDAO{
     }
 
     async consultarCPF(cpf){
-        cpf = cpf || 0
+        cpf = cpf || ' '
         const conexao = await conectar()
         const sql = "SELECT * FROM cliente WHERE cli_cpf = ?"
         const [registros] = await conexao.query(sql, [cpf])
