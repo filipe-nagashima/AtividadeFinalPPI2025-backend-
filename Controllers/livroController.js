@@ -9,9 +9,9 @@ export default class LivroController
         if(requisicao.method == 'POST' && requisicao.is("application/json"))
         {
             const dados = requisicao.body
-            if(dados.titulo && dados.autor && dados.cliente)
+            if(dados.liv_titulo && dados.liv_autor && dados.cliente)
             {
-                const livro = new Livro(0, dados.titulo, dados.autor, dados.cliente)
+                const livro = new Livro(0, dados.liv_titulo, dados.liv_autor, dados.cliente)
                 livro.gravar()
                 .then(()=>
                     resposta.status(200).json(
@@ -55,9 +55,9 @@ export default class LivroController
             const dados = requisicao.body
             const cod = requisicao.params.cod
 
-            if(cod && dados.titulo && dados.autor && dados.cliente)
+            if(cod && dados.liv_titulo && dados.liv_autor && dados.cliente)
             {
-                const livro = new Livro(cod, dados.titulo, dados.autor, dados.cliente)
+                const livro = new Livro(cod, dados.liv_titulo, dados.liv_autor, dados.cliente)
                 livro.alterar().then(() => {
                     resposta.status(200).json({
                         status: true,

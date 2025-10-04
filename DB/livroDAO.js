@@ -49,7 +49,7 @@ export default class LivroDAO{
 
     async consultar(){
         const conexao = await conectar()
-        const sql = "SELECT * FROM livro L INNER JOIN cliente C ON C.cli_cpf = L.cli_cpf"
+        const sql = "SELECT * FROM livro L INNER JOIN cliente C ON C.cli_cpf = L.cli_cpf ORDER BY L.liv_id"
         const [registros] = await conexao.query(sql)
         await conexao.release()
 
@@ -73,7 +73,7 @@ export default class LivroDAO{
     async consultarCodigo(cod){
         cod = cod || 0
         const conexao = await conectar()
-        const sql = "SELECT * FROM livro L INNER JOIN cliente C ON C.cli_cpf = L.cli_cpf WHERE liv_cod = ?"
+        const sql = "SELECT * FROM livro L INNER JOIN cliente C ON C.cli_cpf = L.cli_cpf WHERE liv_id = ? ORDER BY L.liv_id"
         const [registros] = await conexao.query(sql, [cod])
         await conexao.release()
 

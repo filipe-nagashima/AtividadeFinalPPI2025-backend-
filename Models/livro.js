@@ -10,7 +10,7 @@ export default class Livro {
     #cliente
 
     //Construtor
-    constructor(cod = 0, titulo = "", autor = "", cliente = {}) {
+    constructor(cod = 0, titulo = "", autor = "", cliente = null) {
         this.#cod = cod;
         this.#titulo = titulo;
         this.#autor = autor;
