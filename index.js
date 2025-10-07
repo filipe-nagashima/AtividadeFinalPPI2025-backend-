@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import clienteRouter from './Routes/rotaCliente.js'
 import livroRouter from './Routes/rotaLivro.js'
 
@@ -6,6 +7,11 @@ const hostname = '0.0.0.0'
 const porta = 4000
 
 const app = express()
+
+app.use(cors(
+{
+    origin: '*'
+}))
 
 app.use(express.json())
 
